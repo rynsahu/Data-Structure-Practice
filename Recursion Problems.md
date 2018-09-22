@@ -1,5 +1,4 @@
-##Q1: Given two integers m & n, calculate and return their multiplication using recursion. You can only use subtraction and addition for 
-    your calculation. No other operators are allowed.
+## Q1: Given two integers m & n, calculate and return their multiplication using recursion. You can only use subtraction and addition for your calculation. No other operators are allowed.
     
 Solution: 
 ```
