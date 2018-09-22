@@ -33,20 +33,24 @@ Solution:
 
 using namespace std;
 
+int counts(int n, int & count) {
+    int r = n%10;
+    
+    if(n>0) {
+        if(r == 0) {
+            counts(n/10, ++count);
+        }else {
+            counts(n/10, count);
+        }
+    }
+
+    return count;
+}
+
 int countZeros(int n) {
     
-    static int count=0;
-    
-    if (n > 0) {
-        if(n%10 == 0){
-            count++;
-            countZeros(n/10);
-        }else{
-            countZeros(n/10);
-        }   
-    }
-    
-    return count;
+    int count = 0;
+    return counts(n, count);
     
 }
 
