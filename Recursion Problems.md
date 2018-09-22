@@ -25,7 +25,7 @@ int main()
     return 0;
 }
 ```
-#### Given an integer n, count and return the number of zeros that are present in the given integer using recursion.
+#### Q2: Given an integer n, count and return the number of zeros that are present in the given integer using recursion.
 
 Solution:
 ```
