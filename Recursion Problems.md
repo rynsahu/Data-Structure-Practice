@@ -64,7 +64,7 @@ int main()
     return 0;
 }
 ```
-## Write a recursive function that returns the sum of the digits of a given integer.
+#### Write a recursive function that returns the sum of the digits of a given integer.
 
 Solution: 
 '''
