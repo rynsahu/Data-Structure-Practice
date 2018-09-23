@@ -64,7 +64,7 @@ int main()
     return 0;
 }
 ```
-#### Write a recursive function that returns the sum of the digits of a given integer.
+#### Q3: Write a recursive function that returns the sum of the digits of a given integer.
 
 Solution: 
 ```
@@ -90,7 +90,7 @@ int main()
     cout<<sumOfDigits(n);
 }
 ```
-#### Find the length of string using recursion.
+#### Q4: Find the length of string using recursion.
 
 Solution:
 ```
@@ -116,7 +116,7 @@ int main()
 }
 ```
 
-#### Remove the 'x' from string using recursion.
+#### Q5: Remove the 'x' from string using recursion.
 
 Solution:
 ```
