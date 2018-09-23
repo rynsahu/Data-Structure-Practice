@@ -90,3 +90,28 @@ int main()
     cout<<sumOfDigits(n);
 }
 ```
+#### Find the length of string using recursion.
+
+Solution:
+```
+#include <iostream>
+
+using namespace std;
+
+int stringLength(char str[]) {
+    if(str[0] == 0){
+        return 0;
+    }
+    
+    int lengthOfString = stringLength(str + 1);
+    return ++lengthOfString;
+}
+
+int main()
+{
+    char str[100];
+    cin>>str;
+    
+    cout<<stringLength(str);
+}
+```
