@@ -115,3 +115,63 @@ int main()
     cout<<stringLength(str);
 }
 ```
+
+#### Remove the 'x' from string using recursion.
+
+Solution:
+```
+#include <iostream>
+
+using namespace std;
+
+void removeX(char str[]) {
+    if(str[0] == '\0') {
+        return;
+    }
+    
+    if(str[0] != 'x') {
+        removeX(str+1);
+    } else {
+        int i;
+        for(i = 1; str[i] != '\0'; i++) {
+            str[i-1] = str[i];
+        }
+        str[i-1] = str[i];
+        removeX(str);
+    }
+    return;
+}
+
+int stringLength(char str[]) {
+    if(str[0] == 0){
+        return 0;
+    }
+    
+    int lengthOfString = stringLength(str + 1);
+    return ++lengthOfString;
+}
+
+int main()
+{
+    char str[100];
+    cout<<"Enter the string: ";
+    cin>>str;
+    
+    int length = stringLength(str);
+    
+    removeX(str);
+    
+    cout<<"1st length: "<<length<<endl;
+    cout<<"String after removel: "<<str<<endl;
+    
+    length = stringLength(str);
+    cout<<"2nd lenght: "<<length;
+}
+```
+Output:
+```
+Enter the string: axbxzx                                                                                                                 
+1st length: 6         
+String after removel: abz        
+2nd lenght: 3 
+```
