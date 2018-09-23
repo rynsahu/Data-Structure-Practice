@@ -67,7 +67,7 @@ int main()
 #### Write a recursive function that returns the sum of the digits of a given integer.
 
 Solution: 
-'''
+```
 #include <iostream>
 
 using namespace std;
@@ -89,4 +89,4 @@ int main()
     
     cout<<sumOfDigits(n);
 }
-'''
+```
