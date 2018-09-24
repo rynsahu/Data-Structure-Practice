@@ -175,3 +175,53 @@ Enter the string: axbxzx
 String after removel: abz        
 2nd lenght: 3 
 ```
+#### Q6: Given an input string S and two characters c1 and c2, you need to replace every occurrence of character c1 with character c2 in          the given string.
+Solution:
+```
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void replaceCharacter (char input[], char c1, char c2) {
+    
+    if(input[0] == '\0') {
+        return;
+    }
+    
+    
+    if(input[0] == c1) {
+        input[0] = c2;
+        replaceCharacter(input+1, c1, c2);
+    } else {
+        replaceCharacter(input+1, c1, c2);   
+    }
+}
+
+int main()
+{
+    string str;
+    getline(cin, str);
+    
+    char s[str.length()], c1, c2;
+    
+    cin>>c1;
+    cin>>c2;
+    
+    for(int i=0; i <= str.length(); i++) {
+        s[i] = str[i];
+    }
+    
+    replaceCharacter(s,c1,c2);
+    
+    cout<<s<<endl;
+    cout<<str;
+}
+```
+Output:
+```
+xryxn sxhu                                                                                                                               
+x a                                                                                                                                     
+aryan sahu                                                                                                                               
+xryxn sxhu 
+```
