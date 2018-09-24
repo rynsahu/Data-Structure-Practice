@@ -225,4 +225,53 @@ x a
 aryan sahu                                                                                                                               
 xryxn sxhu 
 ```
-#### 
+#### Q7: Given a string S, remove consecutive duplicates from it recursively.
+Solution:
+```
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void removeConsecutiveDuplicates(char *input) {
+    if(input[0] == '\0') {
+        return;
+    } 
+    
+    char c = input[0];
+    
+    if(input[1] == c) {
+        int i;
+        for(i=1; input[i] != '\0'; i++) {
+            input[i] = input[i+1];
+        }
+        input[i] = input[i+1];
+        removeConsecutiveDuplicates(input + 1);
+    } else {
+        removeConsecutiveDuplicates(input + 1);
+    }
+}
+
+int main()
+{
+    string str;
+    getline(cin, str);
+    
+    char s[str.length()];
+    
+    for(int i=0; i <= str.length(); i++) {
+        s[i] = str[i];
+    }
+    
+    removeConsecutiveDuplicates(s);
+    
+    cout<<s<<endl;
+    cout<<str;
+}
+```
+Output:
+```
+aabccba                                                                                                                                 
+abcba      
+aabccba
+```
