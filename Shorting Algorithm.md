@@ -1,5 +1,15 @@
+## What is shorting?
+Arranging of elements in a particular manner it may be in `ascending` or `descending` order that is called shorting.
+
 ## Bubble Short
+In bubble short technique, each pair of adjacent elements is compared and elements are swapped if they are not in order.
+#### Complexity 
+```
+Best Case: o(n)
+Average Case: o(n^2)
+Worst Case: o(n^2)
 Program:
+```
 ```
 #include <iostream>
 
