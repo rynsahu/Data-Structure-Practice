@@ -1,6 +1,50 @@
 ## What is shorting?
 Arranging of elements in a particular manner it may be in `ascending` or `descending` order that is called shorting.
 
+## Selection Short
+In this shorting technique, the list is divided into two parts one is shorted and another one is unsorted. Shorted part will be in the left end and unsorted part will be in the right end.
+In the set of N elements, we need to find out the location of the minimum element and swap it with the location of the first element and repeat this step for n-1 elements until the list is not shorted.
+#### Program:
+```
+#include <iostream>
+using namespace std;
+
+void SelectionShort(int input[], int size) {
+    int temp,minIndex;
+    
+    for(int i=0; i<size-1; i++) 
+    {
+        minIndex = i;
+        for(int j=i+1; j<size; j++) 
+        {
+            if(input[minIndex] > input[j])
+            {
+                minIndex = j;
+            }
+        }
+        temp = input[i];
+        input[i] = input[minIndex];
+        input[minIndex] = temp;
+    }
+}
+
+int main()
+{
+    int size=7;
+    int arr[size];
+    
+    for(int i = 0; i < size; i++) {
+        cin>>arr[i];
+    }
+    
+    SelectionShort(arr, size);
+    
+    for(int i = 0; i < size; i++) {
+        cout<<arr[i]<<" ";
+    }
+}
+```
+
 ## Bubble Short
 In bubble short technique, each pair of adjacent elements is compared and elements are swapped if they are not in order.
 #### Complexity 
