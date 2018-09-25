@@ -9,7 +9,7 @@ Best Case: o(n)
 Average Case: o(n^2)
 Worst Case: o(n^2)
 ```
-Program:
+#### Program:
 ```
 #include <iostream>
 
