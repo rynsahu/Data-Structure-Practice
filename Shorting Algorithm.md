@@ -1,4 +1,4 @@
-## Bubble short
+## Bubble Short
 Program:
 ```
 #include <iostream>
