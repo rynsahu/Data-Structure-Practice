@@ -96,3 +96,41 @@ int main()
     }
 }
 ```
+
+#### Insertion Short
+## Program:
+```
+#include <iostream>
+
+using namespace std;
+
+void InsertionShort(int input[], int size) {
+    for(int i = 0; i<size-1; i++) {
+        int value = input[i];
+        int hole = i;
+        
+        while(hole > 0 && input[hole-1] > value) {
+            input[hole] = input[hole-1];
+            --hole;
+        }
+        
+        input[hole] = value;
+    }
+}
+
+int main()
+{
+    int size=7;
+    int arr[size];
+    
+    for(int i = 0; i < size; i++) {
+        cin>>arr[i];
+    }
+    
+    InsertionShort(arr, size);
+    
+    for(int i = 0; i < size; i++) {
+        cout<<arr[i]<<" ";
+    }
+}
+```
