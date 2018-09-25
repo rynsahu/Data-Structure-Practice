@@ -97,7 +97,7 @@ int main()
 }
 ```
 
-## Insertion Short
+## 3. Insertion Short
 ## Program:
 ```
 #include <iostream>
