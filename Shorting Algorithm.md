@@ -1,7 +1,7 @@
 ## What is shorting?
 Arranging of elements in a particular manner it may be in `ascending` or `descending` order that is called shorting.
 
-## Selection Short
+## 1. Selection Short
 In this shorting technique, the list is divided into two parts one is shorted and another one is unsorted. Shorted part will be in the left end and unsorted part will be in the right end.
 In the set of N elements, we need to find out the location of the minimum element and swap it with the location of the first element and repeat this step for n-1 elements until the list is not shorted.
 #### Program:
@@ -45,7 +45,7 @@ int main()
 }
 ```
 
-## Bubble Short
+## 2. Bubble Short
 In bubble short technique, each pair of adjacent elements is compared and elements are swapped if they are not in order.
 #### Complexity 
 ```
