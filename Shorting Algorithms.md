@@ -98,7 +98,7 @@ int main()
 ```
 
 ## 3. Insertion Sort
-## Program:
+#### Program:
 ```
 #include <iostream>
 
@@ -134,8 +134,8 @@ int main()
     }
 }
 ```
-#### 4. Merge Sort
-## Program:
+## 4. Merge Sort
+#### Program:
 ```
 #include <iostream>
 
