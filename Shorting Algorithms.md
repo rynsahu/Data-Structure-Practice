@@ -233,14 +233,14 @@ int partition(int arr[], int startIndex, int endIndex) {
 }
 
 void quickSort(int arr[], int startIndex, int endIndex) {
-    if(startIndex < endIndex) {
-        int partitionIndex = partition(arr, startIndex, endIndex);
-    
-        quickSort(arr, startIndex, partitionIndex - 1);
-        quickSort(arr, partitionIndex + 1, endIndex);
+    if(startIndex >= endIndex) {
+        return;
     } 
     
+    int partitionIndex = partition(arr, startIndex, endIndex);
     
+    quickSort(arr, startIndex, partitionIndex - 1);
+    quickSort(arr, partitionIndex + 1, endIndex);
 }
 
 int main()
