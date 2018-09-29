@@ -204,3 +204,58 @@ int main()
     
 }
 ```
+## 5. Quick Sort
+#### Program:
+```
+#include <iostream>
+using namespace std;
+
+int partition(int arr[], int startIndex, int endIndex) {
+    int pivot = arr[endIndex];
+    int partitionIndex = startIndex;
+    int temp;
+    
+    for(int i=startIndex; i < endIndex; i++) {
+        if(arr[i] <= pivot) {
+            temp = arr[i];
+            arr[i] = arr[partitionIndex];
+            arr[partitionIndex] = temp;
+            
+            partitionIndex++;
+        }
+    }
+    
+    temp = arr[partitionIndex];
+    arr[partitionIndex] = arr[endIndex];
+    arr[endIndex] = temp;
+    
+    return partitionIndex;
+}
+
+void quickSort(int arr[], int startIndex, int endIndex) {
+    if(startIndex < endIndex) {
+        int partitionIndex = partition(arr, startIndex, endIndex);
+    
+        quickSort(arr, startIndex, partitionIndex - 1);
+        quickSort(arr, partitionIndex + 1, endIndex);
+    } 
+    
+    
+}
+
+int main()
+{
+    int size = 9;
+    int arr[size];
+    
+    for(int i=0; i<size; i++) {
+        cin>>arr[i];
+    }
+    
+    quickSort(arr, 0, 8);
+
+    for(int i=0; i<size; i++) {
+        cout<<arr[i];
+    }    
+}
+```
